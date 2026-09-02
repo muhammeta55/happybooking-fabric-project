@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 venv/
 
-# Data files (büyük CSV'ler repo'ya gitmesin, sadece sample koyacağız)
+# Data files 
 data/*.csv
 !data/sample_*.csv
 
