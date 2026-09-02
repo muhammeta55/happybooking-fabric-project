@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data files (büyük CSV'ler repo'ya gitmesin, sadece sample koyacağız)
+data/*.csv
+!data/sample_*.csv
+
+# Environment / secrets
+.env
+*.env
+
+# DBT
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/__pycache__/
+
+# Fabric / Jupyter checkpoints
+.ipynb_checkpoints/
