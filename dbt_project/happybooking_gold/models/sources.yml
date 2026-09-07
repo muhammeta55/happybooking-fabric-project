@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: dbo
+    tables:
+      - name: bronze_weather_enrichment
+      - name: bronze_currency_enrichment
+
+  - name: silver
+    schema: dbo
+    tables:
+      - name: silver_hotel_booking
+      - name: silver_hotel_booking_reviews_combined

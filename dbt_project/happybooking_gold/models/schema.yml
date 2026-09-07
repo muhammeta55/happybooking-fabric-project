@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_city
+    description: "One row per unique city, enriched with weather data where available."
+    columns:
+      - name: city_id
+        description: "Surrogate key for the city dimension."
+        tests:
+          - unique
+          - not_null
+      - name: city
+        description: "City name, title-cased during Silver cleaning."
+        tests:
+          - not_null
+
+  - name: fact_booking
+    description: "One row per booking - the core fact table, linked to dim_city via city_id."
+    columns:
+      - name: booking_id
+        description: "Natural business key for a booking."
+        tests:
+          - unique
+          - not_null
+      - name: city_id
+        description: "Foreign key to dim_city."
+        tests:
+          - relationships:
+              to: ref('dim_city')
+              field: city_id
+
+  - name: kpi_revenue
+    description: "City-level aggregated revenue and cancellation KPIs."
+    columns:
+      - name: city_id
+        description: "Foreign key to dim_city, grouping key for this aggregate."
+        tests:
+          - unique
+          - not_null
