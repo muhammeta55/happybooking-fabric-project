@@ -8,6 +8,20 @@ with dbt-managed dimensional modeling and a Power BI dashboard.
 Built as interview portfolio material to demonstrate hands-on data engineering
 across ingestion patterns, data quality handling, and analytics delivery.
 
+## Screenshots
+
+**Power BI Dashboard** — revenue and booking KPIs, city breakdown, booking trend
+![Power BI Dashboard](docs/screenshots/power_bi_dashboard.png)
+
+**Gold Layer in Fabric Lakehouse** — dbt-built tables alongside Bronze/Silver
+![Lakehouse Gold Tables](docs/screenshots/lakehouse_gold_tables.png)
+
+**Eventstream Pipeline** — Docker producer → Kafka-compatible Eventstream → Lakehouse
+![Eventstream Pipeline](docs/screenshots/eventstream_pipeline.png)
+
+**Semantic Model Relationships** — star schema (dim_city ↔ fact_booking)
+![Semantic Model](docs/screenshots/semantic_model_relationships.png)
+
 ## Architecture
 
 Docker Stream Producer (Python + Kafka client)
