@@ -7,6 +7,8 @@
 -- re-deduplicate here, keeping the most recently updated version
 -- of each booking_id.
 
+{{ config(materialized='table') }}
+
 with bookings as (
 
     select

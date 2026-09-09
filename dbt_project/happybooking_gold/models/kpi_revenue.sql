@@ -5,6 +5,8 @@
 -- since they can't be attributed to a city_id - they still exist
 -- in fact_booking, just not represented here.
 
+{{ config(materialized='table') }}
+
 select
     fact_booking.city_id,
     dim_city.city,

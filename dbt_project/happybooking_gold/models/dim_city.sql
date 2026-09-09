@@ -10,6 +10,8 @@
 -- data had inconsistent country values for a handful of cities,
 -- which was causing a join fan-out downstream in fact_booking.
 
+{{ config(materialized='table') }}
+
 with distinct_cities as (
 
     select
