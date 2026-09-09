@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 venv/
 
-# Data files 
+# Data files
 data/*.csv
 !data/sample_*.csv
 
@@ -13,9 +13,14 @@ data/*.csv
 *.env
 
 # DBT
+target/
+dbt_packages/
+logs/
 dbt_project/target/
 dbt_project/logs/
-dbt_project/dbt_packages/
+dbt_project/happybooking_gold/logs/
+dbt_project/happybooking_gold/target/
+dbt_project/happybooking_gold/dbt_packages/
 
 # OS
 .DS_Store
